@@ -2,11 +2,13 @@
 
 ### 套件使用: BeautifulSoup、Pandas
 
-### 練習物件導向基礎爬取漁產批發交易行情站並將資料轉為 DataFrame
+練習物件導向基礎爬取漁產批發交易行情站並將資料轉為 DataFrame
 
-### Post 請求需要 Payload 的 Form Data 數據格式
+網站網址: https://efish.fa.gov.tw/efish/statistics/daymultidaysinglefishmultimarket.htm
 
 <img src=img/form_data.png>
+
+Post 請求需要 Payload 的 Form Data 數據格式
 
 ---
 
