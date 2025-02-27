@@ -79,9 +79,9 @@ class SeafoodWholesaleScrapper:
         table = soup.find("table", id="ltable")
         thead = table.find("thead")
 
-        # 欄位名稱為 thead 的部分，欄位資料為 tboby 的部分
+        # 欄位名稱為 thead，欄位資料為 tbody 
         if table:
-            # 抓取欄位名稱
+            # 抓取 thead 欄位名稱
             thead = table.find("thead")
             self.thead_columns = [th.text.strip() for th in thead.find_all("th")]
 
@@ -131,10 +131,9 @@ class SeafoodWholesaleScrapper:
 
         需求:
         DataFrame 的格式要與 API 的一樣:
-        上價	    下價	    中價	     交易日期	    交易量	品種代碼	市場名稱	平均價	魚貨名稱
+        上價	下價	中價	 交易日期	交易量  品種代碼	市場名稱	   平均價  魚貨名稱
         83.0	37.6	64.6	"1140212"	9872.5	1011	三重	    64.7	吳郭魚
         100.3	44.0	63.7	"1140212"	38.6	1011	新營	    67.1	吳郭魚
-        ...
         """
 
         # 日期格式為西元 YYYY-MM-DD 例: 2024-10-20
